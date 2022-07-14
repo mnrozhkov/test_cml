@@ -45,7 +45,7 @@ jobs:
           ![cat](cat.jpg)
           END
 
-          npx github:iterative/cml#7bd9257 send-comment --publish --watch report.md &
+          npx github:iterative/cml#7bd9257 send-comment --token ${{ github.token }} --publish --watch report.md &
 
           while sleep 30; do
             curl --location https://thecatapi.com/api/images/get?format=src > cat.jpg
